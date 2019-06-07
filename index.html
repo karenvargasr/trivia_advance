@@ -9,7 +9,7 @@
   <body>
 
 <!--Página de inicio-->
-<section id=inicio>
+<section id=inicio style="display: block">
   <div>
     <h1>La super trivia</h1>
     <h2>En esta trivia pondrás a prueba tus conocimientos sobre series y películas</h2>
@@ -28,7 +28,7 @@
 <br>
 
 <!--Sección de bienvenida-->
-<section id=bienvenida>
+<section id=bienvenida style="display: none">
   <div>
     <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
   </div>
@@ -38,20 +38,29 @@
     <p>Elige una de las siguientes categorías</p>
 
 <div>
-  <input type="button" value="Series" onclick="catSeries()">
-  <input type="button" value="Películas" onclick="catMovies()">
+  <input type="button" name = "category" value="Series" onclick="startGame()">
+  <input type="button" name = "category" value="Películas" onclick="startGame()">
 </div>
 </section>
+
+<section id  = actualQuestion style="display: none">
+<h2 id = "question"> </h2>
+<button onclick="nextQuestion (this.innerhtml)" id = "answer1"></button>
+<button onclick="nextQuestion (this.innerhtml)" id = "answer2"></button>
+<button onclick="nextQuestion (this.innerhtml)" id = "answer3"></button>
+</section>
+
+
 <!--FIN DE BIENVENIDA-->
 
 <!--categoría SERIES-->
-<section id="questionsSeries">
+ <section id="questionsSeries" style = "display: none">
   <div>
     <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
   </div>
   <h1>Trivia Series</h1>
 
-  <form id = "quizSeries" name = "quizSeries">
+ <!-- <form id = "quizSeries" name = "quizSeries">
     <p class = "questions">¿Quiénes formaban la pareja protagonista de las primeras temporadas de "Lost"?</p>
       <input type = "radio" id = "answer" name = "question1serie" value = "JackKate"> Jack y Kate<br>
       <input type = "radio" id = "answer" name = "question1serie" value = "JackJuliet"> Jack y Juliet<br>
@@ -65,7 +74,7 @@
     <p class = "questions">¿Qué droga cocinan Walter White y Jesse Pinkman en 'Breaking Bad'?</p>
       <input type = "radio" id = "answer" name = "question3serie" value = "Dopamina"> Dopamina<br>
       <input type = "radio" id = "answer" name = "question3serie" value = "Metanfetamina"> Metanfetamina<br>
-      <input type = "radio" id = "answer" name = "question3serie" value = "Cocaina"> Cocaína<br>
+      <input type = "radio" id = "answer" name = "question3serie" value = "Cocaina"> Cocaína<br> -->
 
   <input class="resultButton" id = "button" type = "button" value = "Conocer Resultado" onclick = "checkSeries();">
   </form>
@@ -80,8 +89,8 @@
   </div>
 </section>
 
-
-<!--categoría PELÍCULAS-->
+<!--
+categoría PELÍCULAS
 <section id="questionsMovies">
   <div>
     <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
@@ -103,10 +112,10 @@
   <p class = "questions">¿Que tipo de pez es Nemo?</p>
   <input type = "radio" id = "answer" name = "question3movies" value = "Payaso"> Pez Payaso<br>
   <input type = "radio" id = "answer" name = "question3movies" value = "Anguila"> Pez Anguila<br>
-  <input type = "radio" id = "answer" name = "question3movies" value = "Mariposa"> Pez Mariposa<br>
+  <input type = "radio" id = "answer" name = "question3movies" value = "Mariposa"> Pez Mariposa<br> -->
 
-  <input class="resultButton" id = "button" type = "button" value = "Conocer Resultado" onclick = "checkMovies();">
-  </form>
+  <!-- <input class="resultButton" id = "button" type = "button" value = "Conocer Resultado" onclick = "checkMovies();">
+  </form> -->
 
   <div id = "afterSubmitMovies">
   <p id = "numberCorrectMovies"></p>
