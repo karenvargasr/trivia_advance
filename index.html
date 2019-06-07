@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>La Súper Trivia</title>
+  </head>
+
+  <body>
+
+<!--Página de inicio-->
+<section id=inicio>
+  <div>
+    <h1>La super trivia</h1>
+    <h2>En esta trivia pondrás a prueba tus conocimientos sobre series y películas</h2>
+  </div>
+
+<!--Pedir el nombre-->
+  <div>
+    <p>Para comenzar ingresa tu nombre:</p>
+    <form action="">
+      <input class='nameBox' type="text" id="username" placeholder="Nombre" required><br>
+      <button type="button" onclick="getName()">Comenzar el juego</button>
+    </form>
+  </div>
+</section>
+<!--FIN DE INICIO-->
+<br>
+
+<!--Sección de bienvenida-->
+<section id=bienvenida>
+  <div>
+    <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+  </div>
+    <h1>Bienvenido</h1>
+    <span id="nombre-usuario"></span>
+    <p>¿Estás listo para comenzar a jugar?</p>
+    <p>Elige una de las siguientes categorías</p>
+
+<div>
+  <input type="button" value="Series" onclick="catSeries()">
+  <input type="button" value="Películas" onclick="catMovies()">
+</div>
+</section>
+<!--FIN DE BIENVENIDA-->
+
+<!--categoría SERIES-->
+<section id="questionsSeries">
+  <div>
+    <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+  </div>
+  <h1>Trivia Series</h1>
+
+  <form id = "quizSeries" name = "quizSeries">
+    <p class = "questions">¿Quiénes formaban la pareja protagonista de las primeras temporadas de "Lost"?</p>
+      <input type = "radio" id = "answer" name = "question1serie" value = "JackKate"> Jack y Kate<br>
+      <input type = "radio" id = "answer" name = "question1serie" value = "JackJuliet"> Jack y Juliet<br>
+      <input type = "radio" id = "answer" name = "question1serie" value = "KateCharlie"> Kate y Charlie<br>
+
+    <p class = "questions">¿Con qué novia llegó a ir al altar Ross en 'Friends'?</p>
+      <input type = "radio" id = "answer" name = "question2serie" value = "Emily"> Emily<br>
+      <input type = "radio" id = "answer" name = "question2serie" value = "Rachel"> Rachel<br>
+      <input type = "radio" id = "answer" name = "question2serie" value = "Julie"> Julie<br>
+
+    <p class = "questions">¿Qué droga cocinan Walter White y Jesse Pinkman en 'Breaking Bad'?</p>
+      <input type = "radio" id = "answer" name = "question3serie" value = "Dopamina"> Dopamina<br>
+      <input type = "radio" id = "answer" name = "question3serie" value = "Metanfetamina"> Metanfetamina<br>
+      <input type = "radio" id = "answer" name = "question3serie" value = "Cocaina"> Cocaína<br>
+
+  <input class="resultButton" id = "button" type = "button" value = "Conocer Resultado" onclick = "checkSeries();">
+  </form>
+
+  <div id = "afterSubmit">
+  <p id = "numberCorrect"></p>
+  <p id = "message"></p>
+  <img id = "picture">
+
+  <div id="goback">
+    <button type="button" name="button" onclick="backToCategories()">Elegir nueva categoría</button>
+  </div>
+</section>
+
+
+<!--categoría PELÍCULAS-->
+<section id="questionsMovies">
+  <div>
+    <button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+  </div>
+  <h1>Trivia Películas</h1>
+
+  <form id = "quiz" name = "quiz">
+
+  <p class = "questionsmo">¿Cómo se llama el lugar donde viven los monstruos de Monster INC?</p>
+  <input type = "radio" id = "answer" name = "question1movies" value = "MonsterTown"> Monster Town<br>
+  <input type = "radio" id = "answer" name = "question1movies" value = "Monstropolis"> Monstrópolis<br>
+  <input type = "radio" id = "answer" name = "question1movies" value = "VillaMonstruo"> Villa Monstruo<br>
+
+  <p class = "questions">¿Cuál es el nombre del libro del chef Gusteau en Ratatouille?</p>
+  <input type = "radio" id = "answer" name = "question2movies" value = "ComoAprender"> Cómo aprender a cocinar<br>
+  <input type = "radio" id = "answer" name = "question2movies" value = "Cualquiera"> Cualquiera puede Cocinar<br>
+  <input type = "radio" id = "answer" name = "question2movies" value = "CocinaTontos"> Cocina para tontos<br>
+
+  <p class = "questions">¿Que tipo de pez es Nemo?</p>
+  <input type = "radio" id = "answer" name = "question3movies" value = "Payaso"> Pez Payaso<br>
+  <input type = "radio" id = "answer" name = "question3movies" value = "Anguila"> Pez Anguila<br>
+  <input type = "radio" id = "answer" name = "question3movies" value = "Mariposa"> Pez Mariposa<br>
+
+  <input class="resultButton" id = "button" type = "button" value = "Conocer Resultado" onclick = "checkMovies();">
+  </form>
+
+  <div id = "afterSubmitMovies">
+  <p id = "numberCorrectMovies"></p>
+  <p id = "messageMovies"></p>
+  <img id = "pictureMovie">
+
+  <div id="goback">
+    <button type="button" name="button" onclick="backToCategories()">Elegir nueva categoría</button>
+  </div>
+
+</section>
+
+
+
+
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

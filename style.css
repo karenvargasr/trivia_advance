@@ -1,0 +1,54 @@
+body{
+  text-align: center;
+  background-color: #bafcff;
+}
+
+h1, h2, p, span {
+  font-family: "Lato", sans-serif;
+}
+
+h1{
+  font-size: 60px;
+  font-style: italic;
+}
+
+h2{
+  font-size: 20px
+}
+
+span{
+  font-size: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #6b5384;
+  color: white;
+}
+
+.nameBox{
+  padding: 10px 30px;
+}
+
+.resultButton{
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #e74e5c;
+  color: white;
+}
+
+#goback .button{
+  width: 300px;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #f8bf2c;
+  color: white;
+}
